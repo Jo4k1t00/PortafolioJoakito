@@ -558,9 +558,18 @@ header nav a:hover, header nav a:focus { color: var(--color-acento); }
     transform: translateY(-4px);
     box-shadow: 0 20px 40px rgba(15,23,42,0.12);
 }
-@media (max-width: 660px) {
-    .char-links { gap: 12px; }
-    .char-link { width: 140px; padding: 16px; }
+.apk-link {
+    background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(59,130,246,0.18));
+    border: 1px solid rgba(37,99,235,0.16);
+}
+.apk-icon {
+    font-size: 2rem;
+    line-height: 1;
+}
+.apk-link small {
+    font-size: 0.8rem;
+    color: var(--text-secundario);
+    text-align: center;
 }
 
 /* Modal image sizing */
