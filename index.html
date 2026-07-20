@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Joaquín Guajardo — programador y diseñador de videojuegos. Proyectos en Unity, Blender y Unreal.">
+    <meta property="og:title" content="Joaquín Guajardo — Portafolio">
+    <meta property="og:description" content="Portafolio de Joaquín Guajardo — Programador y Diseñador de Videojuegos">
+    <meta property="og:image" content="Imagen%20de%20WhatsApp%202024-06-22%20a%20las%2014.30.12_73fc8cdd%20(1).jpg">
+    <meta property="og:type" content="website">
     <title>Portafolio | Joaquín Guajardo</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -11,17 +16,20 @@
 <body>
     <header>
         <div class="logo">Joaquín Guajardo</div>
-        <nav>
+        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+        <nav role="navigation" aria-label="Menú principal">
             <a href="#inicio">Inicio</a>
-            <a href="#proyectos">Proyectos</a>
             <a href="#conocimientos">Conocimientos</a>
+            <a href="#destacado">Proyecto</a>
+            <a href="#personajes">Personaje</a>
+            <a href="#proyectos">Proyectos</a>
         </nav>
     </header>
 
     <section id="inicio" class="hero">
         <div class="contenedor-perfil">
             <div class="izquierda">
-                <img src="Imagen de WhatsApp 2024-06-22 a las 14.30.12_73fc8cdd (1).jpg" alt="Foto de Joaquín" class="imagen-circular">
+                <img src="Imagen de WhatsApp 2024-06-22 a las 14.30.12_73fc8cdd (1).jpg" alt="Foto de Joaquín" class="imagen-circular" loading="lazy" decoding="async">
             </div>
             <div class="derecha">
                 <div class="parrafos">
@@ -46,74 +54,13 @@
         </div>
     </section>
 
-    <main id="proyectos">
-        <h2 class="section-title">Mis Proyectos</h2>
-        <section class="container-tarjetas">
-            <div class="tarjeta">
-                <div class="tarjeta-img-contenedor">
-                    <img src="Guerreros.png" alt="Guerreros" />
-                </div>
-                <div class="tarjeta-contenido">
-                    <h3>Guerrero</h3>
-                    <p>Modelos hechos en blender.</p>
-                    <a href="https://1drv.ms/f/c/ce28020eb1c2afd8/IgAO_rIblRegQqqRQD8DKXVDAcEBgh1ryRDQQ8iq6IhBbZ4?e=NJgEWN" class="btn-secundario">Ver proyecto</a>
-                </div>
-            </div>
-      
-            <div class="tarjeta">
-                <div class="tarjeta-img-contenedor">
-                    <img src="Haiko.png" alt="Goshi y Haiko" />
-                </div>
-                <div class="tarjeta-contenido">
-                    <h3>Goshi y Haiko</h3>
-                    <p>Edición de cámara, diseño de escenario y montaje de animación en Unreal.</p>
-                    <a href="https://1drv.ms/f/c/ce28020eb1c2afd8/IgBrUtkKhsNuQqWiW7phsd1qAUnkILDag_ZOF7VqaoKd2Uc?e=D0lXdG" class="btn-secundario">Ver proyecto</a>
-                </div>
-            </div>
-
-            <div class="tarjeta">
-                <div class="tarjeta-img-contenedor">
-                    <img src="tree.png" alt="Árbol de Comportamiento" />
-                </div>
-                <div class="tarjeta-contenido">
-                    <h3>Árbol de Comportamiento</h3>
-                    <p>Creación de árbol de comportamiento básico para juego de Mundo Abierto.</p>
-                    <a href="https://1drv.ms/f/c/ce28020eb1c2afd8/IgCaMhMx5-VvRZb_70XxDI2YARjJGOpmaq5llBrzprkgiPY?e=SBZzo4" target="_blank" class="btn-secundario">Ver proyecto</a>
-                </div>
-            </div>
-        </section>
-        <section class="container-tarjetas">
-            <div class="tarjeta">
-                <div class="tarjeta-img-contenedor">
-                    <img src="PandaRojo.png" alt="Panda Rojo" />
-                </div>
-                <div class="tarjeta-contenido">
-                    <h3>Panda Rojo</h3>
-                    <p>Animacion y esqueleto creado en blender y mecanica simple en unity.</p>
-                    <a href="https://1drv.ms/f/c/ce28020eb1c2afd8/IgAn4kZTTkU5TZq2CKiP1urnAXkNUgRRYVVYGB9ZKZRL9qc?e=xo6Ewh" class="btn-secundario">Ver proyecto</a>
-                </div>
-            </div>
-      
-            <div class="tarjeta">
-                <div class="tarjeta-img-contenedor">
-                    <img src="Nathan Giff.gif" alt="FinishingTheGovernment" />
-                </div>
-                <div class="tarjeta-contenido">
-                    <h3>Finishing The Government</h3>
-                    <p>Proyecto de inicio de año descontinuado.</p>
-                    <a href="https://1drv.ms/f/c/ce28020eb1c2afd8/IgCyBp3JyFI1Q6u7mePQmbjlAUFAOI1N6idyjgrup4-odvE?e=Jg9IHk" class="btn-secundario">Ver proyecto</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
     <section id="conocimientos" class="conocimientos-section">
         <h2 class="section-title">Conocimientos Técnicos</h2>
         <div class="skills-contenedor">
             <h3 class="skills-subtitulo">Software</h3>
             <div class="skills-grid">
                 <article class="skill-item">
-                    <img src="https://avatars.githubusercontent.com/u/426196?s=200&v=4" alt="Unity" class="skill-icon" />
+                    <img src="https://avatars.githubusercontent.com/u/426196?s=200&v=4" alt="Unity" class="skill-icon" loading="lazy" decoding="async" />
                     <div>
                         <h4>Unity</h4>
                         <p>Avanzado</p>
@@ -121,7 +68,7 @@
                 </article>
 
                 <article class="skill-item">
-                    <img src="https://preview.redd.it/0tzyfvdmn5h51.png?width=200&format=png&auto=webp&s=30e3e6b3039ad6faec510b89002bf8c0e4f164bd" alt="Blender" class="skill-icon" />
+                    <img src="https://preview.redd.it/0tzyfvdmn5h51.png?width=200&format=png&auto=webp&s=30e3e6b3039ad6faec510b89002bf8c0e4f164bd" alt="Blender" class="skill-icon" loading="lazy" decoding="async" />
                     <div>
                         <h4>Blender</h4>
                         <p>Avanzado</p>
@@ -129,7 +76,7 @@
                 </article>
 
                 <article class="skill-item">
-                    <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/video-games/unreal-engine-qdh1c46xy8c1nedruo2v5.png/unreal-engine-xwo7bd8vu6fzpnkcifgtu.png?_a=DATAg1AAZAA0" alt="Unreal" class="skill-icon" />
+                    <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/video-games/unreal-engine-qdh1c46xy8c1nedruo2v5.png/unreal-engine-xwo7bd8vu6fzpnkcifgtu.png?_a=DATAg1AAZAA0" alt="Unreal" class="skill-icon" loading="lazy" decoding="async" />
                     <div>
                         <h4>Unreal</h4>
                         <p>Aficionado</p>
@@ -138,5 +85,305 @@
             </div>
         </div>
     </section>
+
+    <!-- Proyecto Destacado -->
+    <section id="destacado" class="featured-section">
+        <div class="featured-card">
+            <div class="featured-meta">
+                <h2 class="section-title">Proyecto Principal</h2>
+                <h3>Juego: SkysOnTheRoad</h3>
+                <p>Una versión prototipo jugable — muestra mecánicas y animaciones. Haz click en la lupa para ver el demo en grande.</p>
+                <div class="dev-info">
+                    <h4>Estado: En desarrollo</h4>
+                    <p>Prototipo jugable grabado desde móvil (Samsung A34). Aún en desarrollo: mecánicas, pulido de controles y optimización.</p>
+                    <ul>
+                        <li><strong>Rol:</strong> Programador y diseñador</li>
+                        <li><strong>Tech:</strong> Unity, Blender</li>
+                        <li><strong>Objetivo:</strong> Proyecto jugable desde móvil</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="video-wrapper">
+                <video id="featuredVideo" class="featured-video" poster="poster-demo.jpg" preload="metadata" playsinline muted>
+                    <source src="SkyJumpiri.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video. <a href="SkyJumpiri.mp4">Descarga el video</a>.
+                </video>
+                    <button class="video-play" id="videoPlayBtn" aria-label="Ver en grande">🔍</button>
+            </div>
+        </div>
+    </section>
+
+        <!-- Modal para ver el video en tamaño grande -->
+        <div class="video-modal" id="videoModal" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <video id="modalVideo" controls playsinline style="display:none">
+                    <source src="SkyJumpiri.mp4" type="video/mp4">
+                    Tu navegador no soporta video.
+                </video>
+                <img id="modalImage" alt="Vista ampliada" style="display:none; max-width:100%; height:auto; object-fit:contain" />
+                <button class="modal-nav prev" id="modalPrev" aria-label="Anterior">‹</button>
+                <button class="modal-nav next" id="modalNext" aria-label="Siguiente">›</button>
+                <div class="modal-counter" id="modalCounter" aria-hidden="true"></div>
+            </div>
+            <button class="close-btn" id="videoModalClose" aria-label="Cerrar">✕</button>
+        </div>
+
+    <!-- Sección: Personaje (carrusel en página) -->
+    <section id="personajes" class="characters-section">
+        <h2 class="section-title">Creación de Personaje y Desarrollo de Juego</h2>
+        <p class="section-sub">Evidencia del personaje principal — usa las flechas para navegar y haz click para ampliar.</p>
+        <div class="char-carousel">
+            <button class="carousel-nav prev" id="pagePrev" aria-label="Anterior">‹</button>
+            <div class="carousel-frame">
+                <img id="carouselImage" tabindex="0" src="Jumperin.png" alt="Personaje - Boceto" class="carousel-img" loading="lazy" data-images="Jumperin.png,Enfoque.png,ArmChar.png,LegChar.png">
+            </div>
+            <button class="carousel-nav next" id="pageNext" aria-label="Siguiente">›</button>
+        </div>
+        <div class="char-links">
+            <a href="https://github.com/Jo4k1t00/CodigosJumper" target="_blank" rel="noopener noreferrer" class="char-link" aria-label="Código del proyecto en GitHub">
+                <img src="https://img.icons8.com/ios-filled/80/000000/github.png" alt="GitHub" loading="lazy" />
+                <span>Códigos en GitHub</span>
+            </a>
+            <a href="https://assetstore.unity.com/packages/3d/characters/humanoids/low-poly-prototype-character-294200" target="_blank" rel="noopener noreferrer" class="char-link" aria-label="Asset del personaje en GitHub">
+                <img src="https://img.icons8.com/ios-filled/80/000000/unity.png" alt="Unity Asset" loading="lazy" />
+                <span>Personaje de unity</span>
+            </a>
+            <a href="https://github.com/Jo4k1t00/SoundsJumper" target="_blank" rel="noopener noreferrer" class="char-link" aria-label="Sonidos del juego en GitHub">
+                <img src="https://img.icons8.com/ios-filled/80/000000/speaker.png" alt="Sonidos" loading="lazy" />
+                <span>Sonidos en GitHub</span>
+            </a>
+        </div>
+    </section>
+
+    <main id="proyectos">
+        <h2 class="section-title">Mis Proyectos</h2>
+        <section class="container-tarjetas">
+            <div class="tarjeta">
+                <div class="tarjeta-img-contenedor">
+                    <img src="Guerreros.png" alt="Guerreros" loading="lazy" decoding="async" />
+                </div>
+                <div class="tarjeta-contenido">
+                    <div class="project-tags">
+                        <span class="project-tag">Blender</span>
+                        <span class="project-tag">Modelado</span>
+                    </div>
+                    <h3>Guerrero</h3>
+                    <p>Modelos hechos en Blender, con foco en estilos de batalla y texturizado.</p>
+                    <a href="https://1drv.ms/f/c/ce28020eb1c2afd8/IgAO_rIblRegQqqRQD8DKXVDAcEBgh1ryRDQQ8iq6IhBbZ4?e=NJgEWN" class="btn-secundario">Ver proyecto</a>
+                </div>
+            </div>
+      
+            <div class="tarjeta">
+                <div class="tarjeta-img-contenedor">
+                    <img src="Haiko.png" alt="Goshi y Haiko" loading="lazy" decoding="async" />
+                </div>
+                <div class="tarjeta-contenido">
+                    <div class="project-tags">
+                        <span class="project-tag">Unreal</span>
+                        <span class="project-tag">Animación</span>
+                    </div>
+                    <h3>Goshi y Haiko</h3>
+                    <p>Edición de cámara, escenario y montaje para una animación interactiva en Unreal.</p>
+                    <a href="https://1drv.ms/f/c/ce28020eb1c2afd8/IgBrUtkKhsNuQqWiW7phsd1qAUnkILDag_ZOF7VqaoKd2Uc?e=D0lXdG" class="btn-secundario">Ver proyecto</a>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <div class="tarjeta-img-contenedor">
+                    <img src="tree.png" alt="Árbol de Comportamiento" loading="lazy" decoding="async" />
+                </div>
+                <div class="tarjeta-contenido">
+                    <div class="project-tags">
+                        <span class="project-tag">IA</span>
+                        <span class="project-tag">Gameplay</span>
+                    </div>
+                    <h3>Árbol de Comportamiento</h3>
+                    <p>Desarrollo de comportamiento básico para NPCs en un juego de mundo abierto.</p>
+                    <a href="https://1drv.ms/f/c/ce28020eb1c2afd8/IgCaMhMx5-VvRZb_70XxDI2YARjJGOpmaq5llBrzprkgiPY?e=SBZzo4" target="_blank" class="btn-secundario">Ver proyecto</a>
+                </div>
+            </div>
+        </section>
+        <section class="container-tarjetas">
+            <div class="tarjeta">
+                <div class="tarjeta-img-contenedor">
+                    <img src="PandaRojo.png" alt="Panda Rojo" loading="lazy" decoding="async" />
+                </div>
+                <div class="tarjeta-contenido">
+                    <div class="project-tags">
+                        <span class="project-tag">Unity</span>
+                        <span class="project-tag">Rigging</span>
+                    </div>
+                    <h3>Panda Rojo</h3>
+                    <p>Animación y esqueleto en Blender con mecánica simple integrada en Unity.</p>
+                    <a href="https://1drv.ms/f/c/ce28020eb1c2afd8/IgAn4kZTTkU5TZq2CKiP1urnAXkNUgRRYVVYGB9ZKZRL9qc?e=xo6Ewh" class="btn-secundario">Ver proyecto</a>
+                </div>
+            </div>
+      
+            <div class="tarjeta">
+                <div class="tarjeta-img-contenedor">
+                    <img src="Nathan Giff.gif" alt="FinishingTheGovernment" loading="lazy" decoding="async" />
+                </div>
+                <div class="tarjeta-contenido">
+                    <div class="project-tags">
+                        <span class="project-tag">Concepto</span>
+                        <span class="project-tag">Narrativa</span>
+                    </div>
+                    <h3>Finishing The Government</h3>
+                    <p>Proyecto de inicio de año con enfoque en narrativa y estilo visual, actualmente en pausa.</p>
+                    <a href="https://1drv.ms/f/c/ce28020eb1c2afd8/IgCyBp3JyFI1Q6u7mePQmbjlAUFAOI1N6idyjgrup4-odvE?e=Jg9IHk" class="btn-secundario">Ver proyecto</a>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+    <script>
+        (function(){
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('header nav');
+            if (menuToggle && nav) {
+                menuToggle.addEventListener('click', function(){
+                    const expanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', String(!expanded));
+                    nav.classList.toggle('open');
+                });
+            }
+
+            // Video play/pause overlay + modal expanded view
+            const video = document.getElementById('featuredVideo');
+            const playBtn = document.getElementById('videoPlayBtn');
+            const modal = document.getElementById('videoModal');
+            const modalVideo = document.getElementById('modalVideo');
+            const modalClose = document.getElementById('videoModalClose');
+            if (video) {
+                const wrapper = video.parentElement;
+                function updateState(){
+                    if (video.paused) wrapper.classList.remove('video-playing');
+                    else wrapper.classList.add('video-playing');
+                }
+                video.addEventListener('play', updateState);
+                video.addEventListener('pause', updateState);
+                video.addEventListener('ended', updateState);
+                // clicking inline video toggles play/pause
+                video.addEventListener('click', function(){
+                    if (video.paused) video.play(); else video.pause();
+                });
+            }
+
+            // Modal media handlers (video and images) + gallery navigation
+            const modalImage = document.getElementById('modalImage');
+            const modalPrev = document.getElementById('modalPrev');
+            const modalNext = document.getElementById('modalNext');
+            const modalCounter = document.getElementById('modalCounter');
+
+            // build gallery array from thumbnails
+            const charThumbs = Array.from(document.querySelectorAll('.char-thumb'));
+            const gallery = charThumbs.map(img => ({ src: img.dataset.src || img.src, alt: img.alt || '' }));
+            let galleryIndex = 0;
+
+            function showImageAt(index) {
+                if (!modal || !modalImage) return;
+                galleryIndex = (index + gallery.length) % gallery.length;
+                const item = gallery[galleryIndex];
+                modalImage.src = item.src;
+                modalImage.alt = item.alt;
+                modalImage.style.display = 'block';
+                if (modalVideo) modalVideo.style.display = 'none';
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden', 'false');
+                if (modalCounter) modalCounter.textContent = (galleryIndex + 1) + " / " + gallery.length;
+            }
+
+            function openModalWithVideo(src) {
+                if (!modal || !modalVideo) return;
+                if (modalImage) modalImage.style.display = 'none';
+                modalVideo.style.display = 'block';
+                if (src) modalVideo.src = src;
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden', 'false');
+                modalVideo.muted = false;
+                modalVideo.currentTime = 0;
+                const p = modalVideo.play(); if (p !== undefined) p.catch(()=>{});
+            }
+
+            function openModalWithImage(src, alt) {
+                const idx = gallery.findIndex(g => g.src === src || g.src.endsWith(src));
+                if (idx >= 0) showImageAt(idx);
+                else {
+                    // fallback: add temporary
+                    gallery.push({ src, alt });
+                    showImageAt(gallery.length - 1);
+                }
+            }
+
+            if (playBtn) {
+                playBtn.addEventListener('click', function(){
+                    const src = (video && video.currentSrc) ? video.currentSrc : 'SkyJumpiri.mp4';
+                    openModalWithVideo(src);
+                });
+            }
+
+            // thumbnails open modal at their index
+            if (charThumbs && charThumbs.length) {
+                charThumbs.forEach(function(img, i){
+                    img.addEventListener('click', function(){
+                        const src = img.dataset.src || img.src;
+                        openModalWithImage(src, img.alt || 'Personaje');
+                    });
+                });
+            }
+
+            // modal prev/next
+            if (modalPrev) modalPrev.addEventListener('click', function(e){ e.stopPropagation(); showImageAt(galleryIndex - 1); });
+            if (modalNext) modalNext.addEventListener('click', function(e){ e.stopPropagation(); showImageAt(galleryIndex + 1); });
+
+            // keyboard navigation for modal
+            document.addEventListener('keydown', function(e){
+                if (!modal || !modal.classList.contains('open')) return;
+                if (e.key === 'ArrowLeft') { e.preventDefault(); showImageAt(galleryIndex - 1); }
+                if (e.key === 'ArrowRight') { e.preventDefault(); showImageAt(galleryIndex + 1); }
+            });
+
+            // Inline carousel on the page (prev/next arrows)
+            const carouselImage = document.getElementById('carouselImage');
+            const pagePrev = document.getElementById('pagePrev');
+            const pageNext = document.getElementById('pageNext');
+            let carouselImages = [];
+            let carouselIndex = 0;
+            if (carouselImage) {
+                const imgs = (carouselImage.dataset.images || '').split(',').map(s=>s.trim()).filter(Boolean);
+                carouselImages = imgs.length ? imgs : [carouselImage.src];
+                function updateCarousel(i){
+                    carouselIndex = (i + carouselImages.length) % carouselImages.length;
+                    carouselImage.src = carouselImages[carouselIndex];
+                    carouselImage.alt = 'Personaje ' + (carouselIndex + 1);
+                }
+                updateCarousel(0);
+                if (pagePrev) pagePrev.addEventListener('click', function(e){ e.preventDefault(); updateCarousel(carouselIndex - 1); });
+                if (pageNext) pageNext.addEventListener('click', function(e){ e.preventDefault(); updateCarousel(carouselIndex + 1); });
+                carouselImage.addEventListener('click', function(){ openModalWithImage(carouselImages[carouselIndex], carouselImage.alt); });
+                // allow keyboard nav when carousel is focused
+                carouselImage.addEventListener('keydown', function(e){ if (e.key === 'ArrowLeft') updateCarousel(carouselIndex - 1); if (e.key === 'ArrowRight') updateCarousel(carouselIndex + 1); });
+            }
+
+            // Close modal
+            function closeModal(){
+                if (!modal) return;
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden', 'true');
+                if (modalVideo && !modalVideo.paused) {
+                    modalVideo.pause();
+                    modalVideo.currentTime = 0;
+                }
+            }
+            if (modalClose) modalClose.addEventListener('click', closeModal);
+            if (modal) {
+                modal.addEventListener('click', function(e){
+                    if (e.target === modal) closeModal();
+                });
+                document.addEventListener('keydown', function(e){
+                    if (e.key === 'Escape') closeModal();
+                });
+            }
+        })();
+    </script>
 </html>
