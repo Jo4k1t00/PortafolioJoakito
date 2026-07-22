@@ -679,3 +679,5 @@ header nav a:hover, header nav a:focus { color: var(--color-acento); }
 .script-apk .section-sub { text-align: center; color: var(--text-secundario); margin-bottom: 18px; }
 
 .char-carousel{padding: 28px; background: linear-gradient(120deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03)); border-radius: 16px; max-width: 1160px; margin: 0 auto;}
+
+.tab-panel {padding: 60px 20px; background: linear-gradient(120deg, #ff7a7a 0%, #ffd56b 40%, #7fe0ff 100%);}
