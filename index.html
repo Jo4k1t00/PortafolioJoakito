@@ -172,83 +172,6 @@
         </div>
     </section>
 
-    <!-- Sección principal con pestañas para alternar entre proyecto destacado y personaje -->
-    <section class="switch-tabs" aria-label="Seleccionar sección principal">
-        <button class="tab-button active" type="button" data-target="destacado">Proyecto</button>
-        <button class="tab-button" type="button" data-target="personajes">Personaje</button>
-    </section>
-
-    <!-- Proyecto Destacado -->
-    <!-- Aquí se muestra el proyecto principal con descripción y vista de video -->
-    <section id="destacado" class="featured-section tab-panel active">
-        <div class="featured-card">
-            <div class="featured-meta">
-                <h2 class="section-title">Proyecto Principal</h2>
-                <h3>Juego: SkyOnTheRoad</h3>
-                <p>Una versión prototipo jugable — muestra mecánicas y animaciones. Haz click en la lupa para ver el demo en grande.</p>
-                <div class="dev-info">
-                    <!--<div class="Bttons-Next">
-                    <button class="carousel-nav prev" id="devPrev" aria-label="Anterior">‹</button>
-                    <div class="Script-Info">
-                        <img id="Scripts" tabindex="0" src="Atributos1.png" alt="Scripts de Unity" class="carousel-img" loading="lazy" data-images="Atributos1.png,Atributos2.png,SpawnPlataform.png">
-                    </div>
-                 </div>
-                    <button class="carousel-nav next" id="devNext" aria-label="Siguiente">›</button>-->
-                    <h4>Estado: En desarrollo</h4>
-                    <p>Prototipo jugable grabado desde móvil (Samsung A34). Aún en desarrollo: mecánicas, pulido de controles y optimización.</p>
-                    <ul>
-                        <li><strong>Rol:</strong> Programador y diseñador</li>
-                        <li><strong>Tech:</strong> Unity, Blender</li>
-                        <li><strong>Objetivo:</strong> Proyecto jugable desde móvil</li>
-                    </ul>
-                </div>
-                <!-- Enlaces principales del proyecto: código y APK descargable -->
-                <div class="featured-actions">
-                    <a href="https://github.com/Jo4k1t00/CodigosJumper" target="_blank" rel="noopener noreferrer" class="btn-primario">Códigos en GitHub</a>
-                    <a href="SkyOnTheRoad.apk" download="SkyOnTheRoad.apk" class="btn-secundario">Descargar APK</a>
-                </div>
-            </div>
-            <div class="video-wrapper">
-                <video id="featuredVideo" class="featured-video" poster="poster-demo.jpg" preload="metadata" playsinline muted>
-                    <source src="SkyJumpiri.mp4" type="video/mp4">
-                    Tu navegador no soporta la etiqueta de video. <a href="SkyJumpiri.mp4">Descarga el video</a>.
-                </video>
-                    <button class="video-play" id="videoPlayBtn" aria-label="Ver en grande">🔍</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección exclusiva para personajes (tab) -->
-    <section id="personajes" class="tab-panel">
-        <h2 class="section-title">Creación de Personaje y Desarrollo de Juego</h2>
-        <p class="section-sub">Evidencia del personaje principal — usa las flechas para navegar y haz click para ampliar.</p>
-        <div class="char-carousel carousel-instance">
-            <button class="carousel-nav prev" aria-label="Anterior">‹</button>
-            <div class="carousel-frame">
-                <img tabindex="0" src="Jumperin.png" alt="Personaje - Boceto" class="carousel-img" loading="lazy" data-images="Jumperin.png,Enfoque.png,ArmChar.png,LegChar.png">
-            </div>
-            <button class="carousel-nav next" aria-label="Siguiente">›</button>
-        </div>
-    </section>
-
-        <!-- Modal para ver el video o la imagen ampliados desde el proyecto destacado o la galería de personajes -->
-        <div class="video-modal" id="videoModal" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <video id="modalVideo" controls playsinline style="display:none">
-                    <source src="SkyJumpiri.mp4" type="video/mp4">
-                    Tu navegador no soporta video.
-                </video>
-                <img id="modalImage" alt="Vista ampliada" style="display:none; max-width:100%; height:auto; object-fit:contain" />
-                <button class="modal-nav prev" id="modalPrev" aria-label="Anterior">‹</button>
-                <button class="modal-nav next" id="modalNext" aria-label="Siguiente">›</button>
-                <div class="modal-counter" id="modalCounter" aria-hidden="true"></div>
-            </div>
-            <button class="close-btn" id="videoModalClose" aria-label="Cerrar">✕</button>
-        </div>
-
-    <!-- Sección de personajes y recursos relacionados, incluye carrusel interactivo y enlaces externos -->
-
-
     <!-- Sección de proyectos adicionales, con énfasis en los trabajos de código y proyectos secundarios -->
     <main id="proyectos">
         <h2 class="section-title">Mis Proyectos</h2>
@@ -256,6 +179,7 @@
         <section class="proyectos-codigo">
             <h3 class="subsection-title">Proyectos de Código</h3>
             <div class="container-tarjetas">
+                <!-- Árbol de Comportamiento (Imagen horizontal en la parte superior) -->
                 <div class="tarjeta">
                     <div class="tarjeta-img-contenedor">
                         <img src="tree.png" alt="Árbol de Comportamiento" loading="lazy" decoding="async" />
@@ -267,44 +191,36 @@
                             <span class="project-tag">Gameplay</span>
                         </div>
                         <h3>Árbol de Comportamiento</h3>
-                        <p>Es un árbol de comportamiento en C# para la IA de un enemigo. Organiza las decisiones por jerarquía: patrullar por defecto, perseguir si detecta al jugador en su rango de visión, y atacar cuando está cerca, gestionando los estados del movimiento en tiempo real.</p>
-                        <button class="btn-secundario project-expand-btn" type="button" aria-expanded="false" aria-controls="proj-tree-extra">Ver demo</button>
-                        <div id="proj-tree-extra" class="expandible" aria-hidden="true">
-                            <button type="button" class="demo-video-trigger" data-video-src="Arbol de comportamiento Demostracion audiovisual.mp4" aria-haspopup="dialog" aria-label="Reproducir demo en ventana emergente">
-                                <img src="tree.png" alt="Vista previa del demo en video" loading="lazy" decoding="async">
-                                <span class="demo-video-play" aria-hidden="true">▶</span>
-                            </button>
-                            <img src="ArbolDeComportamiento.png" alt="Árbol de Comportamiento" class="project-demo-image" loading="lazy" decoding="async" />
-                            <a href="https://github.com/Jo4k1t00/ArbolDeComportamiento" target="_blank" rel="noopener noreferrer" class="btn-primario">Ver código en GitHub</a>
-                        </div>
+                        <p>Es un árbol de comportamiento en C# para la IA de un enemigo. En este me encargue de: <br> 
+                        - Organizar las decisiones por patrullar por defecto, perseguir si detecta al jugador en su rango de visión, y atacar cuando está cerca, gestionando los estados del movimiento en tiempo real.<br>
+                        - Creacion de un sistema de programacion orientado a objetos para poder usar el sistema de estados de un behavior tree, creando nodos reutilizables y escalable a futuras espansiones del proyecto.<br>
+                        - Crear un sistema de deteccion de jugador, el enemigo persigue al jugado para bajarle la vida cuando esta en su rango, al estar cerca, estara atacando, poco a poco bajandole la vida haciendolo desaparecer. <br>
+                    </p>
+                        <a href="https://github.com/Jo4k1t00/ArbolDeComportamiento" target="_blank" rel="noopener noreferrer" class="btn-primario">Ver código en GitHub</a>
                     </div>
                 </div>
 
+                <!-- Sky On The Road (Usa la clase vertical para conservar la proporción de móvil) -->
                 <div class="tarjeta">
-                    <div class="tarjeta-img-contenedor">
-                        <img src="PandaRojo.png" alt="Panda Rojo" loading="lazy" decoding="async" />
+                    <div class="tarjeta-img-contenedor vertical">
+                        <img src="SkyOnTheRoad.gif" alt="Sky On The Road" loading="lazy" decoding="async">
                     </div>
                     <div class="tarjeta-contenido">
                         <div class="project-tags">
-                            <span class="project-tag project-tag-rol">Rol: Programador Gameplay</span>
-                            <span class="project-tag">Unity</span>
-                            <span class="project-tag">Rigging</span>
+                            <span class="project-tag project-tag-rol">Rol: Desarrollador General</span>
+                            <span class="project-tag project-tag-rol">Programacion</span>
+                            <span class="project-tag project-tag-rol">Diseño</span>
                         </div>
-                        <h3>Panda Rojo</h3>
-                        <p>Un Panda rojo con un script para animaciones utilizando la mecanica de HUD para unity, mientras mas 
-                            extiendes el slider, mas se anima el panda mientras se mueve. El slider es un script que permite controlar la animación del personaje en tiempo real, ajustando la velocidad y la intensidad de los movimientos según la posición del slider. 
+                        <h3>Sky On The Road</h3>
+                        <p>Videojuego movil donde debes subir por unas plataformas y llegar lo mas lejos posible. Mi aporte de este proyecto fue:<br>
+                            - Programacion de interacciones con el movil, el personaje se mueve gracias al giroscopio del telefono integrado.<br>
+                            - Programacion de la camara, esta sigue al elemento del personaje hacia arriba con tal de que el jugador pueda subir infinitamente, pero no bajara, el limite de abajo se convierte en el limite de GameOver.<br>
+                            - Diseñe el personaje, inspirado de personajes como strumble guys en su simplicidad, la idea es que es un personaje al desnudo que se pudiera personalizar.<br>
                         </p>
-                        <button class="btn-secundario project-expand-btn" type="button" aria-expanded="false" aria-controls="proj-panda-extra">Ver demo</button>
-                        <div id="proj-panda-extra" class="expandible" aria-hidden="true">
-                            <button type="button" class="demo-video-trigger" data-video-src="Demostracion.mp4" aria-haspopup="dialog" aria-label="Reproducir demo en ventana emergente">
-                                <img src="PandaRojo.png" alt="Vista previa del demo en video" loading="lazy" decoding="async">
-                                <span class="demo-video-play" aria-hidden="true">▶</span>
-                            </button>
-                            <a href="https://github.com/Jo4k1t00/RedPandaScriptAnimationSlider" target="_blank" rel="noopener noreferrer" class="btn-primario">Ver código en GitHub</a>
-                        </div>
+                        <a href="https://github.com/Jo4k1t00/SkyOnTheRoad" target="_blank" rel="noopener noreferrer" class="btn-primario">Ver código en GitHub</a>
                     </div>
                 </div>
-            </div>
+            </div>    
         </section>
 
         <section class="proyectos-secundarios">
@@ -418,7 +334,6 @@
             if (video) {
                 const wrapper = video.parentElement;
 
-                // Actualiza la clase para mostrar/ocultar el botón de reproducir cuando el video está en pausa o en reproducción
                 function updateState(){
                     if (video.paused) wrapper.classList.remove('video-playing');
                     else wrapper.classList.add('video-playing');
@@ -427,24 +342,20 @@
                 video.addEventListener('pause', updateState);
                 video.addEventListener('ended', updateState);
 
-                // Clic en el video integrado alterna entre play y pause
                 video.addEventListener('click', function(){
                     if (video.paused) video.play(); else video.pause();
                 });
             }
 
-            // Modal media handlers (video and images) + gallery navigation
             const modalImage = document.getElementById('modalImage');
             const modalPrev = document.getElementById('modalPrev');
             const modalNext = document.getElementById('modalNext');
             const modalCounter = document.getElementById('modalCounter');
 
-            // Construye la galería a partir de los thumbnails de personaje disponibles en la página
             const charThumbs = Array.from(document.querySelectorAll('.char-thumb'));
             const gallery = charThumbs.map(img => ({ src: img.dataset.src || img.src, alt: img.alt || '' }));
             let galleryIndex = 0;
 
-            // Muestra una imagen de la galería dentro del modal
             function showImageAt(index) {
                 if (!modal || !modalImage) return;
                 galleryIndex = (index + gallery.length) % gallery.length;
@@ -458,7 +369,6 @@
                 if (modalCounter) modalCounter.textContent = (galleryIndex + 1) + " / " + gallery.length;
             }
 
-            // Abre el modal reproduciendo el video con el mismo origen que el video destacado
             function openModalWithVideo(src) {
                 if (!modal || !modalVideo) return;
                 if (modalImage) modalImage.style.display = 'none';
@@ -471,7 +381,6 @@
                 const p = modalVideo.play(); if (p !== undefined) p.catch(()=>{});
             }
 
-            // Abre el modal mostrando una imagen concreta y añade un fallback si no está en la galería
             function openModalWithImage(src, alt) {
                 const idx = gallery.findIndex(g => g.src === src || g.src.endsWith(src));
                 if (idx >= 0) showImageAt(idx);
@@ -488,7 +397,6 @@
                 });
             }
 
-            // Los thumbnails del personaje abren el modal con la imagen seleccionada
             if (charThumbs && charThumbs.length) {
                 charThumbs.forEach(function(img){
                     img.addEventListener('click', function(){
@@ -498,19 +406,15 @@
                 });
             }
 
-            // Botones prev/next del modal para navegar por la galería
             if (modalPrev) modalPrev.addEventListener('click', function(e){ e.stopPropagation(); showImageAt(galleryIndex - 1); });
             if (modalNext) modalNext.addEventListener('click', function(e){ e.stopPropagation(); showImageAt(galleryIndex + 1); });
 
-            // Navegación con teclado dentro del modal
             document.addEventListener('keydown', function(e){
                 if (!modal || !modal.classList.contains('open')) return;
                 if (e.key === 'ArrowLeft') { e.preventDefault(); showImageAt(galleryIndex - 1); }
                 if (e.key === 'ArrowRight') { e.preventDefault(); showImageAt(galleryIndex + 1); }
             });
 
-            // Carruseles de imágenes (personajes y evidencia de experiencia): se inicializan
-            // todos de la misma forma, cada uno con su propia lista de imágenes en data-images
             document.querySelectorAll('.carousel-instance').forEach(function(instance){
                 const img = instance.querySelector('.carousel-img');
                 const prev = instance.querySelector('.carousel-nav.prev');
@@ -530,7 +434,6 @@
                 img.addEventListener('keydown', function(e){ if (e.key === 'ArrowLeft') update(index - 1); if (e.key === 'ArrowRight') update(index + 1); });
             });
 
-            // Expandir / contraer contenido adicional: demos de proyectos y galerías de evidencia
             document.querySelectorAll('.project-expand-btn, .expandible-btn').forEach(button => {
                 button.addEventListener('click', function(){
                     const targetId = this.getAttribute('aria-controls');
@@ -541,14 +444,11 @@
                     this.setAttribute('aria-expanded', String(!expanded));
                     this.textContent = expanded ? labelClosed : labelOpen;
                     if (extra) {
-                        // toggle aria-hidden (true = hidden)
                         extra.setAttribute('aria-hidden', String(expanded));
-                        // if closing, pause any playing videos inside and reset
                         if (expanded) {
                             const vids = extra.querySelectorAll('video');
                             vids.forEach(v => { try { v.pause(); v.currentTime = 0; } catch(e){} });
                         } else {
-                            // if opening, focus the first interactive element for keyboard users
                             const focusable = extra.querySelector('a, button, video, [tabindex]');
                             if (focusable && typeof focusable.focus === 'function') focusable.focus();
                         }
@@ -556,15 +456,12 @@
                 });
             });
 
-            // Miniaturas de demo (proyectos de código): abren el video en la ventana modal
-            // compartida, en vez de reproducirlo incrustado dentro de la tarjeta
             document.querySelectorAll('.demo-video-trigger').forEach(function(trigger){
                 trigger.addEventListener('click', function(){
                     openModalWithVideo(this.dataset.videoSrc);
                 });
             });
 
-            // Función para cerrar el modal y detener el video si está reproduciéndose
             function closeModal(){
                 if (!modal) return;
                 modal.classList.remove('open');
@@ -576,11 +473,9 @@
             }
             if (modalClose) modalClose.addEventListener('click', closeModal);
             if (modal) {
-                // Cerrar modal al hacer clic fuera del contenido
                 modal.addEventListener('click', function(e){
                     if (e.target === modal) closeModal();
                 });
-                // Cerrar modal con la tecla Escape
                 document.addEventListener('keydown', function(e){
                     if (e.key === 'Escape') closeModal();
                 });

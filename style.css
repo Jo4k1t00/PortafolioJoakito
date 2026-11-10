@@ -2,41 +2,32 @@
    PORTAFOLIO — Joaquín Guajardo · Gameplay Programmer
    Sistema de color basado en la paleta proporcionada:
    #A0DDFF · #C1CEFE · #758ECD · #7189FF · #624CAB
-   (escala análoga celeste → violeta, de más clara a más oscura)
    ========================================================= */
 
 :root {
-    /* --- Paleta de marca --- */
-    --color-lightest: #A0DDFF;   /* celeste: fondos suaves, resplandores */
-    --color-light: #C1CEFE;      /* lavanda claro: fondos de tags, tarjetas destacadas */
-    --color-secondary: #758ECD;  /* azul medio: apoyo, íconos, bordes con énfasis */
-    --color-primary: #7189FF;    /* violeta-azul: hover, glow, estados activos */
-    --color-deep: #624CAB;       /* violeta oscuro: color de acción principal (botones, texto de énfasis) */
+    --color-lightest: #A0DDFF;
+    --color-light: #C1CEFE;
+    --color-secondary: #758ECD;
+    --color-primary: #7189FF;
+    --color-deep: #624CAB;
 
-    /* --- Neutros derivados de la paleta (para no romper la coherencia con grises genéricos) --- */
     --bg-color: #F5F6FC;
     --surface: #FFFFFF;
     --text-principal: #17142F;
     --text-secundario: #5B5E82;
     --borde: #E3E6F7;
 
-    /* --- Sombras con tinte de marca en vez de negro plano --- */
     --sombra-sm: 0 4px 14px rgba(98, 76, 171, 0.10);
     --sombra-md: 0 14px 34px rgba(98, 76, 171, 0.16);
     --sombra-lg: 0 22px 50px rgba(98, 76, 171, 0.20);
 
-    /* --- Gradiente de marca: único acento decorativo, reutilizado como firma visual
-       (referencia a una barra de progreso/vida, propia del lenguaje de un HUD de videojuego) --- */
     --gradiente-marca: linear-gradient(90deg, var(--color-lightest), var(--color-primary) 55%, var(--color-deep));
 
-    /* --- Tipografía: Sora para títulos, Inter para texto, Roboto Mono como acento
-       "técnico" en datos concretos (tags, fechas, contacto, contadores) --- */
     --font-display: 'Sora', sans-serif;
     --font-body: 'Inter', sans-serif;
     --font-mono: 'Roboto Mono', monospace;
 }
 
-/* --- Reset --- */
 * {
     margin: 0;
     padding: 0;
@@ -60,7 +51,6 @@ img {
     height: auto;
 }
 
-/* --- Tipografía general --- */
 h1, h2, h3, h4, .logo, .tab-button, .skills-subtitulo {
     font-family: var(--font-display);
 }
@@ -75,7 +65,6 @@ h1, h2, h3, h4, .logo, .tab-button, .skills-subtitulo {
     position: relative;
 }
 
-/* Barra de acento bajo cada título — firma visual repetida a propósito en toda la página */
 .section-title::after {
     content: '';
     position: absolute;
@@ -103,7 +92,6 @@ h1, h2, h3, h4, .logo, .tab-button, .skills-subtitulo {
     text-align: center;
 }
 
-/* --- Header y navegación --- */
 header {
     width: 100%;
     padding: 20px 50px;
@@ -139,7 +127,6 @@ header nav a {
     transition: color 0.25s ease;
 }
 
-/* Subrayado que responde al hover/foco: la única micro-animación de la navegación */
 header nav a::after {
     content: '';
     position: absolute;
@@ -173,7 +160,6 @@ header nav a:focus-visible::after {
     color: var(--text-principal);
 }
 
-/* --- Pestañas Proyecto / Personaje (control segmentado) --- */
 .switch-tabs {
     display: flex;
     justify-content: center;
@@ -222,7 +208,6 @@ header nav a:focus-visible::after {
     display: block;
 }
 
-/* --- Sección Hero (perfil) --- */
 .hero {
     padding: 70px 20px 50px;
     display: flex;
@@ -272,7 +257,6 @@ header nav a:focus-visible::after {
     color: var(--text-principal);
 }
 
-/* Primer <h2>: la especialidad — es el dato más importante, lleva el acento de marca */
 .parrafos h2:first-of-type {
     font-size: 1.15rem;
     font-weight: 600;
@@ -280,7 +264,6 @@ header nav a:focus-visible::after {
     margin-top: 6px;
 }
 
-/* Segundo <h2>: la bajada/tagline — tono neutro, texto secundario */
 .parrafos h2:last-of-type {
     font-size: 1rem;
     font-weight: 400;
@@ -297,8 +280,6 @@ header nav a:focus-visible::after {
     flex-wrap: wrap;
 }
 
-/* --- Credencial: datos de contacto en formato "carnet", pensados para que la página
-   funcione también como CV escaneable --- */
 .credencial {
     display: flex;
     flex-wrap: wrap;
@@ -336,10 +317,6 @@ header nav a:focus-visible::after {
     line-height: 1;
 }
 
-/* --- Botones ---
-   El color base ya tiene contraste alto (AA) contra el texto blanco.
-   El brillo sube al pasar el cursor y baja al hacer click: la interfaz
-   "responde" a la acción, igual que un botón de gameplay bien pulido. */
 .btn-primario,
 .btn-secundario {
     text-decoration: none;
@@ -399,7 +376,6 @@ button:focus-visible {
     outline-offset: 3px;
 }
 
-/* --- Redes sociales --- */
 .redes-sociales {
     display: flex;
     gap: 15px;
@@ -416,7 +392,6 @@ button:focus-visible {
     transform: scale(1.12);
 }
 
-/* --- Conocimientos técnicos --- */
 .conocimientos-section {
     padding: 60px 20px 100px;
 }
@@ -478,9 +453,6 @@ button:focus-visible {
     font-family: var(--font-mono);
 }
 
-/* --- Experiencia y Formación (línea de tiempo) ---
-   La línea vertical reutiliza el mismo gradiente de marca que las barras de
-   acento: aquí sí corresponde, porque el contenido es genuinamente secuencial. */
 .experiencia-section {
     padding: 20px 20px 80px;
 }
@@ -555,13 +527,11 @@ button:focus-visible {
     line-height: 1.65;
 }
 
-/* Botón que expande/contrae contenido adicional (demos, galerías de evidencia) */
 .expandible-btn {
     width: fit-content;
     margin-top: 4px;
 }
 
-/* Carrusel compacto de evidencia fotográfica, embebido dentro de cada hito de la timeline */
 .evidencia-carousel {
     display: flex;
     align-items: center;
@@ -584,7 +554,6 @@ button:focus-visible {
     font-size: 1.4rem;
 }
 
-/* --- Proyecto destacado --- */
 .featured-card {
     max-width: 1280px;
     margin: 0 auto;
@@ -601,7 +570,6 @@ button:focus-visible {
     overflow: hidden;
 }
 
-/* Misma barra de acento que .section-title::after: coherencia visual entre bloques */
 .featured-card::before {
     content: '';
     position: absolute;
@@ -719,7 +687,6 @@ button:focus-visible {
     }
 }
 
-/* --- Modal de video / imagen ampliada --- */
 .video-modal {
     position: fixed;
     inset: 0;
@@ -832,7 +799,6 @@ button:focus-visible {
     font-family: var(--font-mono);
 }
 
-/* --- Personajes / carrusel --- */
 .char-carousel {
     display: flex;
     align-items: center;
@@ -915,7 +881,6 @@ button:focus-visible {
     }
 }
 
-/* --- Proyectos (tarjetas) --- */
 #proyectos {
     padding: 70px 20px;
 }
@@ -932,23 +897,13 @@ button:focus-visible {
     margin: 0 auto;
 }
 
-/* Los proyectos de código tienen contenido expandible (demo); si comparten fila con
-   la grilla auto-fit, el grid estira a ambas tarjetas por igual y se ve descuadrado
-   al abrir solo una. Se apilan en una sola columna para evitar ese problema. */
+/* Grilla para Proyectos de Código (Tarjetas estándar horizontales en la parte superior) */
 .proyectos-codigo .container-tarjetas {
-    grid-template-columns: 1fr;
-    max-width: 820px;
-}
-
-@media (min-width: 700px) {
-    .proyectos-codigo .tarjeta {
-        flex-direction: row;
-    }
-    .proyectos-codigo .tarjeta-img-contenedor {
-        width: 300px;
-        height: auto;
-        flex-shrink: 0;
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1180px;
+    margin: 0 auto;
 }
 
 .tarjeta {
@@ -979,42 +934,40 @@ button:focus-visible {
     box-shadow: var(--sombra-lg);
 }
 
+/* Contenedor estándar de imagen (Horizontal arriba) */
 .tarjeta-img-contenedor {
     width: 100%;
-    height: 300px;
+    height: 260px;
     overflow: hidden;
     background: var(--color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .tarjeta-img-contenedor img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    padding: 14px;
+    object-fit: cover;
+    object-position: center;
+    padding: 0;
     transition: transform 0.5s ease;
 }
 
 .tarjeta:hover .tarjeta-img-contenedor img {
-    transform: scale(1.06);
+    transform: scale(1.04);
 }
 
-.tarjeta-contenido {
-    padding: 26px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    flex-grow: 1;
+/* Contenedor con trato especial para fotos/GIFs verticales de celular */
+.tarjeta-img-contenedor.vertical {
+    height: 380px;
+    background: #0D0B1E;
 }
 
-.tarjeta-contenido h3 {
-    font-size: 1.4rem;
-    color: var(--text-principal);
-}
-
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+.tarjeta-img-contenedor.vertical img {
+    object-fit: contain;
+    padding: 12px;
 }
 
 .project-tag {
@@ -1027,10 +980,17 @@ button:focus-visible {
     font-family: var(--font-mono);
 }
 
-/* Etiqueta de rol: fondo sólido para diferenciarla de un vistazo de las etiquetas de tecnología */
 .project-tag-rol {
     background: var(--color-deep);
     color: var(--surface);
+}
+
+.tarjeta-contenido {
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex-grow: 1;
 }
 
 .tarjeta-contenido p {
@@ -1049,7 +1009,7 @@ button:focus-visible {
 
 @media (max-width: 760px) {
     .tarjeta-img-contenedor {
-        height: 240px;
+        height: 220px;
     }
 }
 
@@ -1057,7 +1017,6 @@ button:focus-visible {
     width: fit-content;
 }
 
-/* Expandir/ocultar contenido: transición suave que confirma la acción del usuario */
 .expandible {
     max-height: 0;
     overflow: hidden;
@@ -1074,7 +1033,6 @@ button:focus-visible {
     margin-top: 4px;
 }
 
-/* Miniatura clicable que abre el video en la ventana modal, en vez de reproducirlo embebido */
 .demo-video-trigger {
     position: relative;
     display: block;
@@ -1134,7 +1092,6 @@ button:focus-visible {
     object-fit: cover;
 }
 
-/* --- Responsividad --- */
 @media (max-width: 768px) {
     .contenedor-perfil {
         flex-direction: column;
@@ -1185,7 +1142,6 @@ button:focus-visible {
     }
 }
 
-/* --- Respeta la preferencia del sistema por menos movimiento --- */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         transition-duration: 0.001ms !important;
